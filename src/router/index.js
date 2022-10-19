@@ -94,9 +94,9 @@ export const constantRoutes = [
     path: '/nested',
     component: Layout,
     redirect: '/nested/menu1',
-    name: 'Nested',
+    name: '多级菜单',
     meta: {
-      title: 'Nested',
+      title: '多级菜单',
       icon: 'nested'
     },
     children: [
@@ -106,6 +106,7 @@ export const constantRoutes = [
         name: 'Menu1',
         meta: { title: 'Menu1' },
         children: [
+
           {
             path: 'menu1-1',
             component: () => import('@/views/nested/menu1/menu1-1'),
@@ -150,12 +151,14 @@ export const constantRoutes = [
   },
 
   {
-    path: 'external-link',
+    path: 'exercise',
     component: Layout,
     children: [
       {
-        path: 'https://panjiachen.github.io/vue-element-admin-site/#/',
-        meta: { title: 'External Link', icon: 'link' }
+        path: 'exercise1',
+        component: () => import('@/views/crud/index'),
+        name: 'l',
+        meta: { title: '练习一' }
       }
     ]
   },
